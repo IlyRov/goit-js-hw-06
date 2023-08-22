@@ -6,8 +6,8 @@ fontSizeControl.addEventListener('input', () => {
   const maxFontSize = 96; 
   const inputValue = fontSizeControl.value;
   
-
   const fontSize = minFontSize + ((maxFontSize - minFontSize) * (inputValue - fontSizeControl.min)) / (fontSizeControl.max - fontSizeControl.min);
   
+  fontSizeControl.style.fontSize = fontSize + 'px';
   textElement.style.fontSize = fontSize + 'px';
 });
